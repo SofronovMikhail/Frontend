@@ -25,56 +25,55 @@
     justify-content: space-between;
     background: #222222;
     align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 .label{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    width: 111px;
 }
-.label_header_img{
-    margin-right: 41px;
-}
+
 .nav{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 26px;
-    align-items: center;
-}
-.menu{
-    margin-right: 33px;
-}
-.personal_account{
-    margin-right: 33px;
+    align-items: baseline;
+    width: 160px;
 }
 
 .header{
-    display: flex;
-    justify-content: center; 
-    align-items: center;  
     background: #F1E4E6;
     margin-bottom: 65px;
-}
-.header_img{
-    margin-right: 64px;
     
 }
+
+.header2{
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding-right: calc(50% - 570px);
+    gap: 64px;
+}
+.header_iimg{
+    width:auto;
+}
 .header_content{
-    margin-right: 331px;
     border-left: 12px solid #F16D7F;
     padding-left: 16px;
+    text-align: center;
+    height: 92px;
+    
 }
 .header_title{
     font-family: "Lato-Black";
     font-size: 48px;
-    font-weight: 900;
     line-height: 58px;
     text-align: left;
 }
 .header_title_content{
     font-family: Lato;
     font-size: 32px;
-    font-weight: 700;
     line-height: 38px;
     text-align: left;
 }
@@ -91,7 +90,7 @@
 .offer_box{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 260px 180px;
+    grid-template-rows: auto;
     gap: 30px;
     margin-bottom: 96px;
 }
@@ -107,28 +106,19 @@
     text-align: center;
     font-family: "Lato-Black";
     font-size: 18px;
-    font-weight: 9000;
     line-height: 21px;
     color: white;
+    position:absolute;
+    z-index: 1;
 }
 .offer_content_title{
     font-family: "Lato-Bold";
     font-size: 24px;
-    font-weight: 700;
     line-height: 29px;
     color: #F16D7F;
 }
-.offer1{
-    background-image: url(imgs/offer_img1.png);
-}
-.offer2{
-    background-image: url(imgs/offer_img2.png);
-}
-.offer3{
-    background-image: url(imgs/offer_img3.png);
-}
-.offer4{
-    background-image: url(imgs/offer_img4.png);
+.offer{
+    position: relative;
 }
 
 .products{
@@ -142,13 +132,11 @@
 .products_title_content{
     font-family: "Lato-Regular";
     font-size: 30px;
-    font-weight: 400;
     line-height: 36px;
 }
 .products_content{
     font-family: "Lato-Regular";
     font-size: 14px;
-    font-weight: 400;
     line-height: 17px;
     color: #9F9F9F;
 }
@@ -172,14 +160,12 @@
 .item_title{
     font-family: "Lato-Regular";
     font-size: 13px;
-    font-weight: 400;
     line-height: 16px;
     margin-bottom: 12px;
 }
 .item_text{
     font-family: "Lato-Regular";
     font-size: 14px;
-    font-weight: 400;
     line-height: 17px;
     color: #5D5D5D;
     margin-bottom: 18px;
@@ -187,7 +173,6 @@
 .item_price{
     font-family: "Lato-Regular";
     font-size: 16px;
-    font-weight: 400;
     line-height: 19px;
     color: #F16D7F;
     margin-bottom: 20px;
@@ -197,11 +182,67 @@
     color: #F26376;
     font-family: "Lato-Regular";
     font-size: 16px;
-    font-weight: 400;
     line-height: 19px;
     padding: 1rem 2rem;
     margin-bottom: 60px;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .center{
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }  
+    .header2{
+        display: flex;
+        justify-content: flex-end; 
+        align-items: center;
+        padding-right: calc(50% - 368px);
+        gap: 39px;
+    } 
+    .header_iimg{
+        width: 386px;
+        height: 368px;
+    }
+    .products_item{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, auto);
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+    .header_title{
+        font-family: "Lato-Black";
+        font-size: 44px;
+        line-height: 58px;
+        text-align: left;
+    }
+    .header_title_content{
+        font-family: Lato;
+        font-size: 24px;
+        line-height: 38px;
+        text-align: left;
+    }
+    .header_span{
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 44px;
+        text-align: left;
+        color: #F16D7F;
+    }
+    
+    .offer_box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        margin-bottom: 110px;
+    }
+    .products_title{
+        margin-bottom: 73px;
+    }
+   
 }
