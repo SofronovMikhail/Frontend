@@ -220,13 +220,13 @@
         text-align: left;
     }
     .header_title_content{
-        font-family: Lato;
+        font-family: "Lato-Bold";
         font-size: 24px;
         line-height: 38px;
         text-align: left;
     }
     .header_span{
-        font-family: Lato;
+        font-family: "Lato-Bold";
         font-size: 24px;
         font-weight: 700;
         line-height: 44px;
@@ -245,4 +245,89 @@
         margin-bottom: 73px;
     }
    
+}
+
+   
+@media (min-width: 320px) and (max-width: 767px){
+    .center{
+        padding-left: calc(50% - 173px);
+        padding-right: calc(50% - 173px);
+     }
+    .header_iimg, .personal_account, .bascet{
+        display: none;
+      }
+    .nav{
+        width: auto;
+    }
+    .header2{
+        height: 363px;
+        justify-content: center;
+      }
+    
+    .offer_box{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 64px;
+    }  
+    .offer_img4{
+        display: none;
+    }
+    .offer4{
+        width: 343px;
+        height: 111px;
+        background-image: url(imgs/offer_img4.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .products_item{
+        padding-left: calc(50% - 180px);
+        padding-right: calc(50% - 180px); 
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .item_img2{
+        opacity: 0.2;
+        
+    }
+    .item2_box{
+        width: 346px;
+        height: 418px;
+        background: #3A3838DB;
+        background-image: url(imgs/Add\ to\ cart.png);
+        background-size: 138px 43px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .header_title{
+        font-family: "Lato-Black";
+        font-size: 38px;
+        line-height: 58px;
+        text-align: left;
+    }
+    .header_title_content{
+        font-family: "Lato-Bold";
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+    }
+    .header_span{
+        font-family: "Lato-Bold";
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+        color: #F16D7F;
+    }
+    .products_title{
+        margin-bottom: 64px;;
+    }
+    .item_title{
+        text-align: left;
+    }
+    .item_text{
+        text-align: left;
+    }
+    .item_price{
+        text-align: left;
+    }
 }
