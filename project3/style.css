@@ -63,6 +63,7 @@
     background: #F1E4E6;
     margin-bottom: 65px;
     display: flex;
+    position:relative;
 }
 .header2{
     display: flex;
@@ -109,6 +110,8 @@
     padding-top: 32px;
     margin-left: 99px;
     background-color: white;
+    position: absolute;
+    right: calc(50% - 802px);
 }
 .dop_title_content{
     font-family: "Lato-Bold";
@@ -404,7 +407,9 @@ li{
 .network_boxs:hover path{
     fill: white;
 }
-
+.img_width{
+    width: 100%;
+}
 
 @media (min-width: 768px) and (max-width: 1024px){
     .center{
@@ -478,7 +483,7 @@ li{
     .form{
         margin-bottom: 140px;
     }
-    .dop_content{
+    .header2:hover+.dop_content{
         display: none;
     }
 }
@@ -492,6 +497,11 @@ li{
     .header_iimg, .personal_account, .bascet{
         display: none;
       }
+      .header2{
+        padding-left: calc(50% - 173px);
+        padding-right: calc(50% - 173px);
+      }
+      
     .nav{
         width: auto;
     }
@@ -582,7 +592,7 @@ li{
     .order_img{
         display: none;
     }
-    .dop_content{
+    .header2:hover+.dop_content{
         display: none;
     }
 }
