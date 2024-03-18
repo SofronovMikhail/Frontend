@@ -1,0 +1,314 @@
+@import "vars";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin center_sb() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin center_center() {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+%fontTextNormal{
+    font-family: "Lato-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+}
+.center{
+    padding-left: calc(50% - $widthcontent / 2);
+    padding-right: calc(50% - $widthcontent / 2);
+}
+@font-face {
+    font-family: "Lato-Regular";
+    src: url(fonts/Lato-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: "Lato-Bold";
+    src: url(fonts/Lato-Bold.woff) format("woff");
+}
+@font-face {
+    font-family: "Lato-Black";
+    src: url(fonts/Lato-Black.woff) format("woff");
+}
+
+
+.navigation{
+    @include center_sb();
+    background: $bgcolorNavFooter;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    &_label{
+        @include center_sb();
+        width: 111px;
+    }
+    &_nav{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 160px;
+        height: 37px;
+        padding-right: 5px;
+    }
+}
+.order_img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    &_number{
+        font-family: "Lato-Regular";
+        font-size: 12px;
+        line-height: 14px;
+        color: $colorwhite;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+    }
+}
+
+.header{
+    background:#F8F3F4;
+    margin-bottom: 96px;
+    &_center{
+        @include center_sb();
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.header_left{
+    display: flex;
+    justify-content: start; 
+    align-items: center;
+    &_content{
+        font-family: "Lato-Regular";
+        font-size: 24px;
+        line-height: 29px;
+        color: $baseColor;
+    }
+
+}
+
+.main_menu{
+    margin-bottom: 128px;
+    display: grid;
+    grid-template-columns: 652px 360px;
+    grid-template-rows: 306px 306px 82px;
+    row-gap: 40px;
+    column-gap: 128px;
+}
+.main_box{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    .mainbox_product{
+        display: flex;
+        border: 1px solid #EAEAEA;
+        box-shadow: 17px 19px 24px 0px #00000021;
+    }
+
+}
+.main_product_img{
+    margin-right: 31px;
+}
+.main_box_product_content{
+    margin-top: 22px;
+    margin-right: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .product_title{
+        font-family: "Lato-Regular";
+        font-size: 24px;
+        line-height: 29px;
+        color: $bgcolorNavFooter;
+        margin-bottom: 42px;
+    }
+    .content{
+        font-family: "Lato-Regular";
+        font-size: 22px;
+        line-height: 26px;
+        color: $colortext;
+        margin-bottom: 6px;
+    }
+    .product_content_span{
+        color: $baseColor;
+    }
+    .input{
+        font-family: "Lato-Regular";
+        font-size: 22px;
+        line-height: 26px;
+        color: $colortext;
+        margin-bottom: 6px;
+    }
+    input[type="number"]{
+        width: 44px;
+        margin-left: 24px;
+        border: 1px solid #EAEAEA;
+    }
+}
+.product_content_svg{
+   margin-top: 28px;
+   margin-right: 22px;
+}
+
+.mainbox_form{
+    padding: 17px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &_title{
+        font-family: "Lato-Regular";
+        font-size: 16px;
+        line-height: 19px;
+        color: $bgcolorNavFooter;
+        margin-bottom: 20px;
+    }
+    .box_form{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .form_input{
+            border: 1px solid #A4A4A4;
+        }
+        .form_input::placeholder{
+            font-family:"Lato-Regular";
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #B1B1B1;
+            padding-left: 12px;
+        }
+        .form_button{
+            border: 1px solid #A4A4A4;
+            padding: 10px 12px;
+            font-family:"Lato-Regular";
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 13px;
+            color: #B1B1B1;
+            background: $colorwhite;
+        }
+    }
+}
+.footer{
+    background: $bgcolorNavFooter;
+    &_input_background{
+        background-image: url(../imgs/background_footer.png);
+        background-size: cover;
+        background-position: center;
+    }
+    &_social_network{
+        @include center_sb();
+    }
+}
+
+.input_footer{
+    @include center_sb();
+    padding-top: 97px;
+    &_bloxs{
+        margin-bottom: 127px;
+        text-align: center;
+        width: 360px;
+        height: 225px;
+    }
+    &_form{
+        text-align: center;
+        width: 557px;
+        height: 142px;
+        padding-left: 104px;
+        padding-right: 97px;
+    }
+}
+.avtor_img{
+    margin-bottom: 30px;
+}
+.avtor_content{
+    font-family: "Lato-Regular";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.form_title{
+    font-family: "Lato-Bold";
+    font-size: 24px;
+    letter-spacing: 0em;
+}
+.form_content{
+    font-family: "Lato-Regular";
+    font-size: 18px;
+    margin-bottom: 32px;
+    letter-spacing: 0em;
+}
+
+.form_input{
+    @include center_center();
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 356px;
+    height: 49px;
+    &_input{
+        background: #E1E1E1;
+        @extend %fontTextNormal;
+        text-align: center;
+        color: $bgcolorNavFooter;
+        padding-left: 22px;
+        padding-right: 64px;
+        border: 1px solid transparent;
+        border-top-left-radius: 15% 30%;
+        border-bottom-left-radius: 15% 30%;
+    }
+   &_button{
+        background: $baseColor;
+        @extend %fontTextNormal;
+        text-align: center;
+        color: $colorwhite;
+        padding-left: 8px;
+        padding-right: 7px;
+        border: 1px solid transparent;
+        border-top-right-radius: 15% 30%;
+        border-bottom-right-radius: 15% 30%;
+    }
+}
+
+.social_network1{
+    color: $colorwhite;
+    @extend %fontTextNormal;
+
+}
+.social_network2{
+    display: flex;
+    justify-content: end;
+    gap: 7px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    &_boxs{
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        background-color: $colorwhite;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    &_boxs:hover{
+        background: $baseColor;
+    }
+    &_boxs:hover path{
+        fill: $colorwhite;
+    }
+}
