@@ -103,11 +103,6 @@
        column-gap: 128px;
 }
 
-.main_box {
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-}
 .main_box .mainbox_product {
   display: flex;
   border: 1px solid #EAEAEA;
@@ -155,18 +150,17 @@
   margin-left: 24px;
   border: 1px solid #EAEAEA;
 }
+.main_box_product_content input[type=number]:focus {
+  border: 1px solid #EAEAEA;
+}
 
 .product_content_svg {
   margin-top: 28px;
-  margin-right: 22px;
+  margin-right: 57px;
 }
 
 .mainbox_form {
   padding: 17px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 .mainbox_form_title {
   font-family: "Lato-Regular";
@@ -224,6 +218,67 @@
   line-height: 13px;
   color: #B1B1B1;
   background: #FFFFFF;
+}
+
+.mainbox_total_price {
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.mainbox_total_price .total_price_content {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 12px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #EAEAEA;
+  margin-bottom: 17px;
+}
+.mainbox_total_price .total_price_content .price_content1 {
+  font-family: "Lato-Regular";
+  font-size: 11px;
+  line-height: 13px;
+  color: #4D4D4D;
+}
+.mainbox_total_price .total_price_content .price_content2 {
+  font-family: "Lato-Bold";
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #4D4D4D;
+}
+.mainbox_total_price .total_price_button {
+  width: 275px;
+  text-align: center;
+  padding: 15px 41px;
+  background-color: #F16D7F;
+}
+.mainbox_total_price .total_price_button .price_button {
+  font-family: "Lato-Regular";
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background-color: #F16D7F;
+  border: none;
+}
+.mainbox_total_price .mainbox_nav {
+  justify-content: space-between;
+}
+
+.summa {
+  padding-left: 20px;
+}
+
+.summa2 {
+  color: #F16D7F;
+}
+
+.main_box_nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {
