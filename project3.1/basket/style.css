@@ -53,6 +53,59 @@
   padding-right: 5px;
 }
 
+.dop_content {
+  display: none;
+  position: absolute;
+  top: 200px;
+  width: 232px;
+  height: 634px;
+  padding-left: 32px;
+  padding-top: 32px;
+  background-color: white;
+  border: 1px solid #EAEAEA;
+  transition: 0.6s;
+}
+
+.dop_title_content {
+  font-family: "Lato-Bold";
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.figcaption {
+  color: #F16D7F;
+  font-family: "Lato-Regular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+li {
+  font-family: "Lato-Regular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  color: #6F6E6E;
+  list-style-type: none;
+  padding-left: 21px;
+  margin-bottom: 12px;
+}
+
+.boorger_img:hover + .dop_content {
+  display: block;
+  right: -232px;
+}
+
 .order_img {
   position: absolute;
   right: 0;
@@ -97,7 +150,7 @@
   margin-bottom: 128px;
   display: grid;
   grid-template-columns: 652px 360px;
-  grid-template-rows: 306px 306px 82px;
+  grid-template-rows: 306px 306px 50px;
   row-gap: 40px;
   -moz-column-gap: 128px;
        column-gap: 128px;
@@ -106,6 +159,9 @@
 .main_box .mainbox_product {
   display: flex;
   border: 1px solid #EAEAEA;
+  transition: 0.6s;
+}
+.main_box .mainbox_product:hover {
   box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.1294117647);
 }
 
@@ -156,7 +212,7 @@
 
 .product_content_svg {
   margin-top: 28px;
-  margin-right: 57px;
+  margin-left: 57px;
 }
 
 .mainbox_form {
@@ -218,6 +274,12 @@
   line-height: 13px;
   color: #B1B1B1;
   background: #FFFFFF;
+  transition: 0.6s;
+}
+.mainbox_form .box_form .form_button:hover {
+  color: #FFFFFF;
+  background-color: #F16D7F;
+  border: none;
 }
 
 .mainbox_total_price {
@@ -226,6 +288,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+  background-color: #F5F3F3;
 }
 .mainbox_total_price .total_price_content {
   width: 275px;
@@ -253,18 +316,24 @@
 .mainbox_total_price .total_price_button {
   width: 275px;
   text-align: center;
-  padding: 15px 41px;
-  background-color: #F16D7F;
 }
 .mainbox_total_price .total_price_button .price_button {
+  padding: 15px 41px;
   font-family: "Lato-Regular";
   font-size: 16px;
   line-height: 19px;
+  color: #4D4D4D;
+  background-color: white;
+  border: 1px solid #A4A4A4;
+  transition: 0.6s;
+}
+.mainbox_total_price .total_price_button .price_button:hover {
   color: #FFFFFF;
   background-color: #F16D7F;
   border: none;
 }
 .mainbox_total_price .mainbox_nav {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -276,9 +345,20 @@
   color: #F16D7F;
 }
 
-.main_box_nav {
+.mainbox_nav {
   display: flex;
   justify-content: space-between;
+}
+.mainbox_nav .nav_button {
+  padding: 17px 40px;
+  background-color: #FFFFFF;
+  border: 1px solid #A4A4A4;
+  transition: 0.6s;
+}
+.mainbox_nav .nav_button:hover {
+  background-color: #F16D7F;
+  border: 1px solid #A4A4A4;
+  color: #FFFFFF;
 }
 
 .footer {
