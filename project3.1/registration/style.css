@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.social_network1, .form_input_button, .form_input_input {
+.social_network1, .form_input_button, .form_input_input, .form__title {
   font-family: "Lato-Regular", sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -123,7 +123,7 @@ li {
 
 .header {
   background: #F8F3F4;
-  margin-bottom: 96px;
+  margin-bottom: 64px;
 }
 .header_center {
   display: flex;
@@ -148,207 +148,111 @@ li {
 
 .main_menu {
   margin-bottom: 128px;
-  display: grid;
-  grid-template-columns: 652px 360px;
-  grid-template-rows: 306px 306px 50px;
-  row-gap: 40px;
-  -moz-column-gap: 128px;
-       column-gap: 128px;
-}
-
-.main_box .mainbox_product {
   display: flex;
-  border: 1px solid #EAEAEA;
-  transition: 0.6s;
+  justify-content: space-between;
+  gap: 128px;
 }
-.main_box .mainbox_product:hover {
-  box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.1294117647);
-}
-
-.main_product_img {
-  margin-right: 31px;
-}
-
-.main_box_product_content {
-  margin-top: 22px;
-  margin-right: 57px;
+.main_menu .content_left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  gap: 39px;
 }
-.main_box_product_content .product_title {
+
+.descriptionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.descriptionBox:only-child, .descriptionBox__li {
   font-family: "Lato-Regular";
   font-size: 24px;
-  line-height: 29px;
+  line-height: 28.8px;
   color: #222222;
-  margin-bottom: 42px;
-}
-.main_box_product_content .content {
-  font-family: "Lato-Regular";
-  font-size: 22px;
-  line-height: 26px;
-  color: #4D4D4D;
-  margin-bottom: 6px;
-}
-.main_box_product_content .product_content_span {
-  color: #F16D7F;
-}
-.main_box_product_content .input {
-  font-family: "Lato-Regular";
-  font-size: 22px;
-  line-height: 26px;
-  color: #4D4D4D;
-  margin-bottom: 6px;
-}
-.main_box_product_content input[type=number] {
-  width: 44px;
-  margin-left: 24px;
-  border: 1px solid #EAEAEA;
-}
-.main_box_product_content input[type=number]:focus {
-  border: 1px solid #EAEAEA;
 }
 
-.product_content_svg {
-  margin-top: 28px;
-  margin-left: 57px;
+.descriptionBox__li {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.descriptionBox__li_select {
+  padding-right: 22px;
 }
 
-.mainbox_form {
-  padding: 17px 0px;
-}
-.mainbox_form_title {
-  font-family: "Lato-Regular";
-  font-size: 16px;
-  line-height: 19px;
-  color: #222222;
-  margin-bottom: 20px;
-}
-.mainbox_form .box_form {
-  gap: 20px;
+.form {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 20px;
   align-items: flex-start;
 }
-.mainbox_form .box_form .form_input {
+.form__title {
+  color: #222222;
+}
+.form__input {
+  width: 360px;
+  height: 45px;
   border: 1px solid #A4A4A4;
-}
-.mainbox_form .box_form .form_input::-moz-placeholder {
-  font-family: "Lato-Regular";
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #B1B1B1;
-  padding-left: 12px;
-}
-.mainbox_form .box_form .form_input::placeholder {
-  font-family: "Lato-Regular";
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #B1B1B1;
-  padding-left: 12px;
-}
-.mainbox_form .box_form .form_button {
-  border: 1px solid #A4A4A4;
-  padding: 10px 12px;
-  font-family: "Lato-Regular";
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 13px;
-  color: #B1B1B1;
-  background: #FFFFFF;
-  transition: 0.6s;
-}
-.mainbox_form .box_form .form_button:hover {
-  color: #FFFFFF;
-  background-color: #F16D7F;
-  border: none;
-}
-
-.mainbox_total_price {
-  padding: 34px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  background-color: #F5F3F3;
-}
-.mainbox_total_price .total_price_content {
-  width: 275px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  gap: 12px;
-  padding-bottom: 21px;
-  border-bottom: 1px solid #EAEAEA;
-  margin-bottom: 17px;
-}
-.mainbox_total_price .total_price_content .price_content1 {
-  font-family: "Lato-Regular";
-  font-size: 11px;
-  line-height: 13px;
-  color: #4D4D4D;
-}
-.mainbox_total_price .total_price_content .price_content2 {
-  font-family: "Lato-Bold";
-  font-size: 16px;
-  line-height: 19.2px;
-  color: #4D4D4D;
-}
-.mainbox_total_price .total_price_button {
-  width: 275px;
-  text-align: center;
-}
-.mainbox_total_price .total_price_button .price_button {
-  padding: 15px 41px;
-  font-family: "Lato-Regular";
-  font-size: 16px;
-  line-height: 19px;
-  color: #4D4D4D;
-  background-color: white;
-  border: 1px solid #A4A4A4;
-  transition: 0.6s;
-}
-.mainbox_total_price .total_price_button .price_button:hover {
-  color: #FFFFFF;
-  background-color: #F16D7F;
-  border: none;
-}
-.mainbox_total_price .mainbox_nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.summa {
-  padding-left: 20px;
-}
-
-.summa2 {
-  color: #F16D7F;
-}
-
-.mainbox_nav {
-  display: flex;
-  justify-content: space-between;
-}
-.mainbox_nav .nav_button {
-  padding: 17px 40px;
   background-color: #FFFFFF;
-  border: 1px solid #A4A4A4;
+}
+.form__input::-moz-placeholder {
+  font-family: "Lato-Regular";
+  font-size: 13px;
+  line-height: 15.6px;
+  color: #B1B1B1;
+  padding-left: 18px;
+}
+.form__input::placeholder {
+  font-family: "Lato-Regular";
+  font-size: 13px;
+  line-height: 15.6px;
+  color: #B1B1B1;
+  padding-left: 18px;
+}
+.form__radioBox {
+  display: flex;
+  gap: 20px;
+  margin-top: 13px;
+}
+.form__radio {
+  font-family: "Lato-Regular";
+  font-size: 11px;
+  line-height: 13.2px;
+  color: #222222;
+  margin-right: 10px;
+}
+.form__description {
+  width: 360px;
+  font-family: "Lato-Regular";
+  font-size: 13px;
+  line-height: 15.6px;
+  text-align: left;
+  color: #B1B1B1;
+}
+
+.formButton {
+  width: 167px;
+  height: 50px;
+  padding: 16px 20px;
+  color: #F16D7F;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
   transition: 0.6s;
 }
-.mainbox_nav .nav_button:hover {
+.formButton__svg {
+  margin-left: 20px;
+}
+.formButton__svg path {
+  fill: #F16D7F;
+}
+
+.formButton:hover {
   background-color: #F16D7F;
-  border: 1px solid #A4A4A4;
   color: #FFFFFF;
+}
+
+.formButton:hover path {
+  fill: #FFFFFF;
 }
 
 .footer {

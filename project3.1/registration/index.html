@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clothing store</title>
+</head>
+<body>
+    <nav class="navigation center">
+        <div class="navigation_label">
+            <img src="../imgs/icon.png" alt="Эмблема магазина" class="label_header_img">
+            <img src="../imgs/icon_loop.png" alt="Значок поиска" class="search_header_img">
+        </div>
+        <div class="navigation_nav"> 
+            <img src="../imgs/icon_boorger.png" alt="Значок меню" class="menu header_img boorger_img">
+            <div class="dop_content">
+                <p class="dop_title_content">MENU</p>
+                <figure class="list list1">
+                    <figcaption class="figcaption">MAN</figcaption> 
+                    <ul>
+                        <li>Accessories</li>
+                        <li>Bags</li>
+                        <li>Denim</li>
+                        <li>T-Shirts</li>
+                    </ul>
+                </figure>
+                <figure class="list list2">
+                    <figcaption class="figcaption">WOMAN</figcaption> 
+                    <ul>
+                        <li>Accessories</li>
+                        <li>Jackets & Coats</li>
+                        <li>Polos</li>
+                        <li>T-Shirts</li>
+                        <li>Shirts</li>
+                    </ul>
+                </figure>
+                <figure class="list list3">
+                    <figcaption class="figcaption">KIDS</figcaption> 
+                    <ul>
+                        <li>Accessories</li>
+                        <li>Jackets & Coats</li>
+                        <li>Polos</li>
+                        <li>Shirts</li>
+                        <li>Bags</li>
+                    </ul>
+                </figure>
+            </div>           
+            <img src="../imgs/icon_person.png" alt="Значок аккаунта" class="personal_account header_img">
+            <img src="../imgs/icon_shop.png" alt="Значок корзины" class="bascet header_img">
+            <div class="order_img">
+                <img src="../imgs/Ellipse.png" alt="круг">
+                <p class="order_img_number">5</p>
+            </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header_center center">
+            <div class="header_left">
+                <p class="header_left_content">REGISTRATION</p>
+            </div>
+        </div> 
+    </header>
+    <main class="main">
+            <div class="main_menu center">
+                <div class="content_left">
+                    <div class="form form1">
+                        <p class="form__title">
+                            Your Name
+                        </p>
+                        <input type="text" placeholder="First Name" class="form__input">
+                        <input type="text" placeholder="Last Name" class="form__input">
+                        <div class="form__radioBox">
+                            <label for="Male"><input type="radio" class="form__radio" value="Male" name="gender">Male</label> 
+                            <label for="Female"><input type="radio" class="form__radio" value="Female" name="gender">Female</label>
+                        </div>
+                    </div>
+                    <div class="form form2">
+                        <p class="form__title">
+                            Login details
+                        </p>
+                        <input type="email" placeholder="Email" class="form__input">
+                        <input type="text" placeholder="Password" class="form__input">
+                        <p class="form__description">
+                            Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters
+                        </p>
+                    </div>
+                    <div class="formButton">
+                        JOIN NOW 
+                        <svg class="formButton__svg" width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div> 
+                <div class="content_right">
+                    <div class="descriptionBox">
+                        <h2 class="descriptionBox__title">
+                            LOYALTY HAS ITS PERKS
+                        </h2>
+                        <p class="descriptionBox__content">
+                            Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:
+                        </p>
+                        <ul class="descriptionBox__ul">
+                            <li class="descriptionBox__li"><span class="descriptionBox__li_select"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" fill="black"/>
+</svg>
+</span> 15% off welcome offer
+                            </li>
+                            <li class="descriptionBox__li"><span class="descriptionBox__li_select"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" fill="black"/>
+</svg>
+</span> Free shipping, returns and exchanges on all orders</li>
+                            <li class="descriptionBox__li"><span class="descriptionBox__li_select"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" fill="black"/>
+</svg>
+</span> $10 off a purchase on your birthday</li>
+                            <li class="descriptionBox__li"><span class="descriptionBox__li_select"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" fill="black"/>
+</svg>
+</span> Early access to products</li>
+                            <li class="descriptionBox__li"><span class="descriptionBox__li_select"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" fill="black"/>
+</svg>
+</span> Exclusive offers & rewards</li>
+                        </ul>
+                    </div>
+                </div>
+           </div> 
+    </main>
+    <footer class="footer">
+        <div class="footer_input_background">
+            <div class="input_footer center">
+                <figure class="input_footer_bloxs avtor">
+                    <img class="avtor_img" src="../imgs/avtor.png" alt="картинка автора">
+                    <figcaption class="avtor_content">
+                        “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+                    </figcaption>    
+                </figure>
+                <div class="input_footer_form">
+                    <p class="form_title">SUBSCRIBE</p>
+                    <p class="form_content">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <div class="form_input">
+                        <input class="form_input_input" type="email" required placeholder="Enter Your Email">
+                        <button class="form_input_button" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div class="footer_social_network center">
+            <div class="social_network social_network1">
+                <p class="social_network_content">
+                    © 2022  Brand  All Rights Reserved.
+                </p>
+            </div>
+            <div class="social_network social_network2">
+                
+                <div class="social_network2_boxs">
+                    <svg width="12px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/>
+                    </svg>
+                </div>
+                <div class="social_network2_boxs">
+                    <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
