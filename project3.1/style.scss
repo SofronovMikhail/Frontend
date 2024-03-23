@@ -1,9 +1,10 @@
-@import "vars";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+@import "vars";
 @mixin center_sb() {
     display: flex;
     justify-content: space-between;
@@ -16,10 +17,14 @@
     flex-wrap: wrap;
     align-items: center;
 }
+html{
+    font-size: 8px;
+    line-height: 8px;
+}
 %fontTextNormal{
     font-family: "Lato-Regular", sans-serif;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.75rem;
+    line-height: 2rem;
 }
 .center{
     padding-left: calc(50% - $widthcontent / 2);
@@ -38,10 +43,11 @@
     src: url(fonts/Lato-Black.woff) format("woff");
 }
 
-
+nav{
+    background: $bgcolorNavFooter;
+}
 .navigation{
     @include center_sb();
-    background: $bgcolorNavFooter;
     padding-top: 18px;
     padding-bottom: 18px;
     &_label{
@@ -64,8 +70,8 @@
     top: 0;
     &_number{
         font-family: "Lato-Regular";
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
         color: $colorwhite;
         position: absolute;
         top: 3px;
@@ -88,8 +94,8 @@
     align-items: center;
     &_content{
         font-family: "Lato-Regular";
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 3rem;
+        line-height: 3.5rem;
         color: $baseColor;
     }
 
@@ -111,8 +117,8 @@
 }
 .header_span{
     font-family: "Lato-Bold";
-    font-size: 37px;
-    line-height: 44px;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
     text-align: left;
     color: $baseColor;
 }
@@ -181,8 +187,8 @@
     }
     &_title{
         font-family: "Lato-Regular";
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 2.2rem;
+        line-height: 2.75rem;
         color: $colortext;
         margin-bottom: 49px;
     }
@@ -194,8 +200,8 @@
     }
     &_summa{
         font-family: "Lato-Regular";
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 3rem;
+        line-height: 3.5rem;
         color: $baseColor;
     }
 }
@@ -222,6 +228,10 @@
         padding-top: 15px;
         padding-bottom: 15px;
         color: $baseColor;
+        font-family: "Lato-Regular";
+        font-size: 2rem;
+        line-height: 2.5rem;
+
     }
     
 }
@@ -267,6 +277,8 @@
         background-image: url(imgs/background_footer.png);
         background-size: cover;
         background-position: center;
+        display: flex;
+        align-items: center;
     }
     &_social_network{
         @include center_sb();
@@ -282,8 +294,8 @@
     }
     &_title{
         font-family: "Lato-Regular";
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 2.5rem;
+        line-height: 3rem;
         color: $colorwhite;
         margin-bottom: 16px;
     }
@@ -302,9 +314,10 @@
         height: 225px;
     }
     &_form{
-        text-align: center;
-        width: 557px;
-        height: 142px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
         padding-left: 104px;
         padding-right: 97px;
     }
@@ -314,22 +327,19 @@
 }
 .avtor_content{
     font-family: "Lato-Regular";
-    font-size: 20px;
+    font-size: 2.5rem;
     font-style: italic;
-    font-weight: 400;
-    line-height: 24px;
+    line-height: 3rem;
 }
 
 .form_title{
     font-family: "Lato-Bold";
-    font-size: 24px;
-    letter-spacing: 0em;
+    font-size: 3rem;
 }
 .form_content{
     font-family: "Lato-Regular";
-    font-size: 18px;
+    font-size: 2.25rem;
     margin-bottom: 32px;
-    letter-spacing: 0em;
 }
 
 .form_input{
@@ -389,3 +399,36 @@
     }
 }
 
+
+@media (min-width: 768px) and (max-width: 1024px){
+    
+    .center{
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }  
+    .main{
+        &_img{
+            margin-bottom: 0px;
+        }
+        &_basket{
+            position: static;
+            margin-bottom: 129px;
+        }
+        &_item{
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+        }
+    }
+    
+  
+    
+    .input{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 48px;
+    }
+        
+    .input_form{
+        margin-bottom: 140px;
+    }
+}   

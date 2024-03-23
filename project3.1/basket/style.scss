@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 8px;
+    line-height: 8px;
+}
 @mixin center_sb() {
     display: flex;
     justify-content: space-between;
@@ -73,8 +77,8 @@
 }
 .dop_title_content{
     font-family: "Lato-Bold";
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.75rem;
+    line-height: 2rem;
     text-align: left;
     margin-bottom: 24px;
 }
@@ -84,19 +88,16 @@
 .figcaption{
     color: #F16D7F;
     font-family: "Lato-Regular";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0em;
+    font-size: 1.75rem;
+    line-height: 2rem;
     text-align: left;
     margin-bottom: 12px;
 }
 li{
     font-family: "Lato-Regular";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0em;
+    font-size: 1.75rem;
+    line-height: 2rem;
+
     color: #6F6E6E;
     list-style-type: none;
     padding-left: 21px;
@@ -112,8 +113,8 @@ li{
     top: 0;
     &_number{
         font-family: "Lato-Regular";
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
         color: $colorwhite;
         position: absolute;
         top: 3px;
@@ -137,8 +138,8 @@ li{
     align-items: center;
     &_content{
         font-family: "Lato-Regular";
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 3rem;
+        line-height: 3.75rem;
         color: $baseColor;
     }
 
@@ -146,24 +147,36 @@ li{
 
 .main_menu{
     margin-bottom: 128px;
-    display: grid;
-    grid-template-columns: 652px 360px;
-    grid-template-rows: 306px 306px 50px;
-    row-gap: 40px;
-    column-gap: 128px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 128px;
+    &_left{
+        display: flex;
+        flex-direction: column;
+        width: 652px;
+        gap: 40px;
+    }
+    &_right{
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        gap: 40px;
+    }
 }
 
-.main_box{
-    .mainbox_product{
-        display: flex;
-        border: 1px solid #EAEAEA;
-        transition: 0.6s;
-        
-    }
-    .mainbox_product:hover{
-        box-shadow: 17px 19px 24px 0px #00000021;
-    }
+
+.mainbox_product{
+    display: flex;
+    border: 1px solid #EAEAEA;
+    transition: 0.6s;  
+    position: relative;
 }
+.mainbox_product:hover{
+    box-shadow: 17px 19px 24px 0px #00000021;
+}
+
 .main_product_img{
     margin-right: 31px;
 }
@@ -176,15 +189,15 @@ li{
     align-items: flex-start;
     .product_title{
         font-family: "Lato-Regular";
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 3rem;
+        line-height: 3.75rem;
         color: $bgcolorNavFooter;
         margin-bottom: 42px;
     }
     .content{
         font-family: "Lato-Regular";
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 2.75rem;
+        line-height: 3.25rem;
         color: $colortext;
         margin-bottom: 6px;
     }
@@ -193,8 +206,8 @@ li{
     }
     .input{
         font-family: "Lato-Regular";
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 2.75rem;
+        line-height: 3.25rem;
         color: $colortext;
         margin-bottom: 6px;
     }
@@ -209,8 +222,9 @@ li{
     }
 }
 .product_content_svg{
-   margin-top: 28px;
-   margin-left: 57px;
+    position: absolute;
+    top: 28px;
+    right: 24px;
 }
 
 .mainbox_form{
@@ -218,8 +232,8 @@ li{
     
     &_title{
         font-family: "Lato-Regular";
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 2rem;
+        line-height: 2.5rem;
         color: $bgcolorNavFooter;
         margin-bottom: 20px;
     }
@@ -234,10 +248,8 @@ li{
         }
         .form_input::placeholder{
             font-family:"Lato-Regular";
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 16px;
-            letter-spacing: 0em;
+            font-size: 1.75rem;
+            line-height: 2rem;
             text-align: left;
             color: #B1B1B1;
             padding-left: 12px;
@@ -246,9 +258,8 @@ li{
             border: 1px solid #A4A4A4;
             padding: 10px 12px;
             font-family:"Lato-Regular";
-            font-size: 11px;
-            font-weight: 400;
-            line-height: 13px;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
             color: #B1B1B1;
             background: $colorwhite;
             transition: 0.6s;
@@ -280,14 +291,14 @@ li{
         margin-bottom: 17px;
         .price_content1{
             font-family:"Lato-Regular";
-            font-size: 11px;
-            line-height: 13px;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
             color: $colortext;
         }
         .price_content2{
             font-family: "Lato-Bold";
-            font-size: 16px;
-            line-height: 19.2px;
+            font-size: 2rem;
+            line-height: 2.5rem;
             color: $colortext;
         }
     }
@@ -298,8 +309,8 @@ li{
         .price_button{
             padding: 15px 41px;
             font-family:"Lato-Regular";
-            font-size: 16px;
-            line-height: 19px;
+            font-size: 2rem;
+            line-height: 2.5rem;
             color: $colortext;
             background-color: white;
             border: 1px solid #A4A4A4;
@@ -364,9 +375,10 @@ li{
         height: 225px;
     }
     &_form{
-        text-align: center;
-        width: 557px;
-        height: 142px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
         padding-left: 104px;
         padding-right: 97px;
     }
@@ -376,22 +388,19 @@ li{
 }
 .avtor_content{
     font-family: "Lato-Regular";
-    font-size: 20px;
+    font-size: 2.5rem;
     font-style: italic;
-    font-weight: 400;
-    line-height: 24px;
+    line-height: 3rem;
 }
 
 .form_title{
     font-family: "Lato-Bold";
-    font-size: 24px;
-    letter-spacing: 0em;
+    font-size: 3rem;
 }
 .form_content{
     font-family: "Lato-Regular";
-    font-size: 18px;
+    font-size: 2.25rem;
     margin-bottom: 32px;
-    letter-spacing: 0em;
 }
 
 .form_input{
@@ -450,3 +459,37 @@ li{
         fill: $colorwhite;
     }
 }
+@media (min-width: 768px) and (max-width: 1024px){
+    
+    .center{
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }  
+    .main_menu{
+       gap: 64px;
+       &_left{
+        width: 734px;
+       }
+       &_right{
+        gap:15px;
+        flex-direction: row;
+       }
+       .mainbox_total_price{
+        margin-top: 54px;
+       }
+    }
+    
+    .header{
+        margin-bottom: 59px;
+    }
+    
+    .input_footer{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 48px;
+    }
+        
+    .input_form{
+        margin-bottom: 140px;
+    }
+}   

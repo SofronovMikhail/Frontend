@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 8px;
+    line-height: 8px;
+}
 @mixin center_sb() {
     display: flex;
     justify-content: space-between;
@@ -25,6 +29,7 @@
     padding-left: calc(50% - $widthcontent / 2);
     padding-right: calc(50% - $widthcontent / 2);
 }
+
 @font-face {
     font-family: "Lato-Regular";
     src: url(fonts/Lato-Regular.woff) format("woff");
@@ -64,8 +69,8 @@
     top: 0;
     &_number{
         font-family: "Lato-Regular";
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
         color: $colorwhite;
         position: absolute;
         top: 3px;
@@ -89,8 +94,8 @@
     align-items: center;
     &_content{
         font-family: "Lato-Regular";
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 3rem;
+        line-height: 3.5rem;
         color: $baseColor;
     }
 
@@ -184,8 +189,8 @@
     width: 360px;
     margin-bottom: 16px;
     font-family: "Lato-Bold";
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.75rem;
+    line-height: 2rem;
 }
 .details_left_subtitle{
     display: flex;
@@ -195,8 +200,8 @@
     margin-bottom: 18px;
     color: $colortext;
     font-family: "Lato-Regular";
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.75rem;
+    line-height: 2rem;
 }
 .subdetails_left[open] .subdetails_left_span{
     color: $baseColor;
@@ -275,15 +280,18 @@
     background: $bgcolorNavFooter;
     &_description{
         display: flex;
+        flex-wrap: wrap;
         padding-top: 104px;
         padding-bottom: 104px;
         gap: 30px;
-        justify-content: space-between;
+        justify-content: center;
     }
     &_input_background{
         background-image: url(../imgs/background_footer.png);
         background-size: cover;
         background-position: center;
+        display: flex;
+        align-items: center;
     }
     &_social_network{
         @include center_sb();
@@ -297,8 +305,8 @@
     }
     &_title{
         font-family: "Lato-Regular";
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 2.5rem;
+        line-height: 3rem;
         color: $colorwhite;
         margin-bottom: 16px;
     }
@@ -317,9 +325,11 @@
         height: 225px;
     }
     &_form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        width: 557px;
-        height: 142px;
+        gap: 30px;
         padding-left: 104px;
         padding-right: 97px;
     }
@@ -337,14 +347,13 @@
 
 .form_title{
     font-family: "Lato-Bold";
-    font-size: 24px;
-    letter-spacing: 0em;
+    font-size: 3rem;
+
 }
 .form_content{
     font-family: "Lato-Regular";
-    font-size: 18px;
+    font-size: 2.25rem;
     margin-bottom: 32px;
-    letter-spacing: 0em;
 }
 
 .form_input{
@@ -404,3 +413,30 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+    
+    .center{
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }  
+    .main{
+        &_menu{
+            justify-content: space-between;
+        }
+        
+        &_item{
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+        }
+    }
+    
+    .input{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 48px;
+    }
+        
+    .input_form{
+        margin-bottom: 140px;
+    }
+}   
