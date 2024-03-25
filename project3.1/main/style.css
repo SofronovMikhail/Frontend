@@ -436,4 +436,63 @@ html {
   .input_form {
     margin-bottom: 140px;
   }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .center {
+    padding-left: calc(50% - 173px);
+    padding-right: calc(50% - 173px);
+  }
+  .header_iimg, .personal_account, .bascet {
+    display: none;
+  }
+  .order_img {
+    display: none;
+  }
+  .navigation_nav {
+    justify-content: end;
+  }
+  .header .header_center {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .header .header_center .header_left {
+    margin-bottom: 32px;
+  }
+  .main {
+    margin-bottom: 64px;
+  }
+  .main_menu {
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  .main_menu .menu_left .summary_left_span {
+    display: none;
+  }
+  .main_menu .menu_center {
+    flex-wrap: nowrap;
+    margin-left: 0px;
+    gap: 24px;
+  }
+  .main_menu .menu_center * {
+    font-size: 12px;
+  }
+  .main_item {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+  .input {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .input_form {
+    margin-bottom: 140px;
+    padding: 0px;
+  }
+  .footer_social_network {
+    flex-direction: column;
+  }
+  .footer_social_network .social_network1 {
+    margin-top: 48px;
+  }
 }/*# sourceMappingURL=style.css.map */

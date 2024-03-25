@@ -412,6 +412,8 @@ nav{
         }
         &_basket{
             position: static;
+            margin: 0px;
+            padding: 65px 0px;
             margin-bottom: 129px;
         }
         &_item{
@@ -430,5 +432,66 @@ nav{
         
     .input_form{
         margin-bottom: 140px;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px){
+    .center{
+        padding-left: calc(50% - 173px);
+        padding-right: calc(50% - 173px);
+     }
+    .header_iimg, .personal_account, .bascet{
+        display: none;
+    }
+    .order_img{
+        display: none;
+    }
+    .navigation_nav{
+        justify-content: end;
+    }
+    .header{
+        .header_center{
+            flex-direction: column;
+            .header_left{
+                margin-bottom: 32px;
+            }
+        }
+    }
+    .main{
+        margin-bottom: 64px;
+        &_img{
+            margin-bottom: 0px;
+            flex-wrap: nowrap;
+            height: 624px;
+        }
+        &_basket{
+            position: static;
+            margin-bottom: 64px;
+        }
+        &_item{
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: center;
+        }
+    } 
+    .main_basket{
+        position: static;
+        margin: 0px;
+        padding: 64px 0px;
+        margin-bottom: 64px;
+    } 
+    .input{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 48px;
+    }
+        
+    .input_form{
+        margin-bottom: 140px;
+        padding: 0px;
+    }
+    .footer_social_network{
+        flex-direction: column;
+        .social_network1{
+            margin-top: 48px;
+        }
     }
 }   
