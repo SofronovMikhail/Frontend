@@ -12,7 +12,7 @@ let cub = () => {
         return console.log("Не правильное значение");
     }
 }
-console.log(cub());
+cub();
 
 let salary = () =>{
     let num = prompt("Введите вашу заработанную плату");
@@ -22,7 +22,7 @@ let salary = () =>{
         return console.log("Не правильное значение");
     }
 }
-console.log(salary());
+salary();
 
 let max = () =>{
     let number1 = prompt("Введите первое число");
@@ -34,7 +34,7 @@ let max = () =>{
         return console.log("Какое то значение введено не верно");
     }
 }
-console.log(max());
+max();
 
 let sum = (a, b) =>{
     if (acceptableValue(a) && acceptableValue(b)) {
@@ -64,7 +64,7 @@ let divide = (a, b) =>{
         return console.log("Не правильное значение");
     }
 } 
-console.log(sum(7, 10));
-console.log(difference(7, 10));
-console.log(multiplication(7, 10));
-console.log(divide(7, 10));
+sum(7, 10);
+difference(7, 10);
+multiplication(7, 10);
+divide(7, 10);
