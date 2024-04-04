@@ -13,12 +13,12 @@ function evenOdd(){
 }
 evenOdd();
 
-let array = [1, 2, 3, 4, 5, 6, 7];
+const array = [1, 2, 3, 4, 5, 6, 7];
 array.splice(3, 2);
 console.log(array);
 
 function random(){
-    let randomArray = new Array(5);
+    const randomArray = new Array(5);
     let sum = 0;
     let min = Infinity;
     let search = "В массиве нет цифры 3";
