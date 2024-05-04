@@ -18,21 +18,21 @@
 
 const section = JSON.stringify([
   {
-    id: Date.now(),
+    id: 0,
     name: "footbal",
     time: "morning",
     maxCount: 20,
     currentCount: 0,
   },
   {
-    id: Date.now(),
+    id: 1,
     name: "bascketbal",
     time: "daytime",
     maxCount: 20,
     currentCount: 0,
   },
   {
-    id: Date.now(),
+    id: 2,
     name: "volleybal",
     time: "evening",
     maxCount: 20,
@@ -46,17 +46,37 @@ if(!localStorage.getItem(keySection)){
 }
 const sections = JSON.parse(localStorage.getItem(keySection));
 const olList = document.querySelector(".listSection");
-olList.innerHTML = sections.map(createView).join("");
 
 function createView(sections){
-  return 
-    `<li class="${sections.id}">
-     <h3> ${sections.name}</h3>
-     <p>${sections.time}</p>
-     <p>${sections.maxCount}</p>
-     <p>${sections.currentCount}</p>
-     <buton class="subscribe">Записаться</button>
-     <buton class="unsubscribe">Отписаться</button>
-     </li>
-    `
+  return `<li class="${sections.id}">
+     <h3 class="name"> ${sections.name}</h3>
+     <p class="time"> time: ${sections.time}</p>
+     <p class="maxCount"> maxCount: ${sections.maxCount}</p>
+     <p class="currentCount"> currentCount: ${sections.currentCount}</p>
+     <button class="subscribe">Записаться</button>
+     <button class="unsubscribe">Отписаться</button>
+     </li>`;
 }
+olList.innerHTML = sections.map(createView).join("");
+const subscribeButton = document.querySelector(".subscribe");
+
+olList.addEventListener("click", event => {
+    const button = event.target;
+    const buttonParent = button.parentNode;
+    if(button.classList.contains("subscribe")){
+      sections.forEach(function(el){
+        if(buttonParent.classList.contains(el.id) && el.currentCount < el.maxCount) {
+          el.currentCount += 1;
+        };
+      });
+    };
+    if(button.classList.contains("unsubscribe")){
+      sections.forEach(function(el){
+        if(buttonParent.classList.contains(el.id) && el.currentCount > 0) {
+          el.currentCount -= 1;
+        };
+      });
+    }
+    localStorage.setItem(keySection, JSON.stringify(sections));
+    olList.innerHTML = sections.map(createView).join("");
+});
