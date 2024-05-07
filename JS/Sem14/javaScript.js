@@ -21,23 +21,39 @@ c. При клике на навигационные точки, слайдер 
 */
 
 const nextBtn = document.querySelector(".next");
-const previosBtn = document.querySelector(".previos");
+const previousBtn = document.querySelector(".previous");
 const boxContent = document.querySelector(".boxContent");
+const boxNav = document.querySelector(".boxNav")
 const arrContent = ["dog1.jpg", "dog2.jpg", "dog3.jpg"];
 const img = document.createElement("img");
 boxContent.append(img);
-
+img.src = arrContent[0];
 nextBtn.addEventListener("click", ()=>{
   for(let i = 0; i < arrContent.length; i++){
-    if(img.src.includes(arrContent[i])) {
-       img.src = arrContent[i+1]
+     if(img.src.includes(arrContent[arrContent.length-1])){
+      img.src = arrContent[0];
+      return
     };
-    if(img.src.includes(arrContent[arrContent.length-1])){
-      img.src = arrContent[0];
-    }
-    else{
-      img.src = arrContent[0];
-    }
+    if(img.src.includes(arrContent[i])) {
+       img.src = arrContent[i+1];
+       return
+    };
   }
 });
+previousBtn.addEventListener("click", ()=>{
+  for(let i = 0; i < arrContent.length; i++){
+     if(img.src.includes(arrContent[0])){
+      img.src = arrContent[arrContent.length-1];
+      return
+    };
+    if(img.src.includes(arrContent[i])) {
+       img.src = arrContent[i-1];
+       return
+    };
+  }
+});
+
+boxNav.addEventListener("click", ({target}) =>{
+  img.src = arrContent[target.className - 1];
+})
 
