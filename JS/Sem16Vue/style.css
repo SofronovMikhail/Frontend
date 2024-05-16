@@ -27,6 +27,7 @@
     display: flex;
     align-items: baseline;
     gap: 8px;
+    margin-bottom: 31px;
 }
 .label_name{
     font-family: "Bold";
@@ -174,7 +175,7 @@
     position: relative;
 }
 .article_news_item:nth-child(2){
-    background-color: #E7E7E7;
+    background-color: #F4F0EC;
 }
 .flow_box{
     height: 41px;
@@ -205,6 +206,7 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
 }
 .artikle_news_item_date{
@@ -212,6 +214,63 @@
     font-size: 16px;
 }
 .article_news_item_svg{
+    display: flex;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background-color: #F4F0EC;
+    justify-content: center;
+    align-items: center;
+}
+.article_news_item:nth-child(2) .article_news_item_svg{
+    background-color: white;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+.social_network{
+    display: flex;
+    justify-content: flex-start;
+    gap: 54px
+}
+.social_network_name{
+    font-family: "Bold";
+    font-size: 18x;
+}
+.footer_nav{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer_nav_name{
+    font-family: "Bold";
+    font-size: 25x;
+}
+.nav_project{
+    font-family: "Regular";
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contacts_name{
+    font-family: "Bold";
+    font-size: 25x;
+}
+.address{
+    font-family: "Regular";
+    font-size: 22px;
+}
+.email{
+    font-family: "Regular";
+    font-size: 22px;
+}
+.telephone{
+    font-family: "Regular";
+    font-size: 22px;
 }
