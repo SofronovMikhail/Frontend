@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <div class="floating_block">
+        <h2 class="artikle_news_box_title">Статьи &<br> Новости</h2>
+        <div class="nav">
+            <p class="naw_link"><a class="link nav_home" href="#">Домой</a> / <a class="link nav_project" href="#">Блог</a> </p>
+        </div>
+    </div>
+    <nav class="navigation center">
+        <div class="label">
+            <svg width="34" height="34" class="label_svg" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z" fill="#CDA274"/>
+            </svg>
+            <p class="label_name">Interno</p>
+        </div>
+        <div class="nav">
+            <a class="link nav_home" href="#">Домой</a> 
+            <a class="link nav_project" href="#">Проект</a>
+            <a class="link nav_project" href="#">Блог</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="news_box_img">
+            <img src="../imgs/news_main.png" alt="главная картинка изображения" class="news_main_img">
+        </div>
+        
+        <section class="section center">
+            <div class="section_box">
+                <div class="section_box_content">
+                    <h1 class="section_title">Последний пост</h1>
+                    <div class="section_box-content_box">
+                        <img src="../imgs/news_select.png" alt="#" class="section_img">
+                        <div class="section_box-content_box_content">
+                            <p class="section_box-content_box_content_title">Low Cost Latest Invented Interior Designing Ideas</p>
+                            <p class="section_box-content_box_content_content">LС того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов. Перед появлением электронных издательств дизайнеры импровизировали в работе над макетами, изображая текст при помощи волнистых линий. С появлением самоклеющихся наклеек с напечатанным текстом «Lorem ipsum» появился более реалистичный способ обозначения расположения текста на странице.
+                            </p>
+                            <div class="artikle_news_item_dates">
+                                <p class="artikle_news_item_date">22 Декабрь,2022</p>
+                                <div class="article_news_item_svg">
+                                    <svg width="9"  class="news_swg" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          <div class="artikle_news_box">
+                <h2 class="artikle_news_box_title center">Статьи & Новости</h2>
+            </div>
+        <article id="app" class="artikle_news center artikle_news_items">
+            <div v-for="item in lists"  class="artikle_news_items center">
+                <div class="article_news_item">
+                    <img class="article_news_item_img" v-bind:src="item.src" alt="Картинка">
+                    <a href="#" class="artikle_news_item_title">{{ item.title }}</a>
+                    <div class="artikle_news_item_dates">
+                        <p class="artikle_news_item_date">{{ item.date }}</p>
+                        <div class="article_news_item_svg">
+                            <svg width="9"  class="news_swg" height="16" viewBox="0 0 9 16" fill="none" v-bind:xmlns="item.xmlns">
+                                <path d="M1.77142 14.9527L7.71428 8.267L1.77142 1.58128" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                        </div>
+                    </div>
+                    <div class="flow_box">
+                        <p class="flow_box_content">{{ item.content }}</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="footer center">
+       <div class="footer_box">
+            <div class="label">
+                <svg width="34" height="34" class="label_svg" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z" fill="#CDA274"/>
+                </svg>
+                <p class="label_name">Interno</p>
+            </div>
+            <div class="social_network">
+                <svg class="social_network_label" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6367 4.59375C17.3398 4.06641 17.9727 3.43359 18.4648 2.69531C17.832 2.97656 17.0938 3.1875 16.3555 3.25781C17.1289 2.80078 17.6914 2.09766 17.9727 1.21875C17.2695 1.64062 16.4609 1.95703 15.6523 2.13281C14.9492 1.39453 14 0.972656 12.9453 0.972656C10.9062 0.972656 9.25391 2.625 9.25391 4.66406C9.25391 4.94531 9.28906 5.22656 9.35938 5.50781C6.30078 5.33203 3.55859 3.85547 1.73047 1.64062C1.41406 2.16797 1.23828 2.80078 1.23828 3.50391C1.23828 4.76953 1.87109 5.89453 2.89062 6.5625C2.29297 6.52734 1.69531 6.38672 1.20312 6.10547V6.14062C1.20312 7.93359 2.46875 9.41016 4.15625 9.76172C3.875 9.83203 3.52344 9.90234 3.20703 9.90234C2.96094 9.90234 2.75 9.86719 2.50391 9.83203C2.96094 11.3086 4.33203 12.3633 5.94922 12.3984C4.68359 13.3828 3.10156 13.9805 1.37891 13.9805C1.0625 13.9805 0.78125 13.9453 0.5 13.9102C2.11719 14.9648 4.05078 15.5625 6.16016 15.5625C12.9453 15.5625 16.6367 9.97266 16.6367 5.08594C16.6367 4.91016 16.6367 4.76953 16.6367 4.59375Z" fill="#292F36"/>
+                    </svg>
+                <p class="social_network_name">in</p>                    
+            </div>
+       </div>
+       <div class="footer_box">
+        <div class="footer_nav">
+            <h3 class="footer_nav_name">Страницы</h3>
+            <a class="nav_project" href="#">Домой</a> 
+            <a class="nav_project" href="#">Проект</a>
+            <a class="nav_project" href="#">Блог</a>
+        </div>
+       </div>
+       <div class="footer_box">
+            <div class="contacts">
+                <h3 class="contacts_name">Контакты</h3>
+                <p class="address">55 East Birchwood Ave. Brooklyn,<br> New York 11201</з> 
+                <p class="email">contact@interno.com</p>
+                <p class="telephone">(123) 456 - 7890</p>
+            </div>
+       </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../javaScript.js"></script>
+</body>
+</html>
