@@ -1,49 +1,54 @@
 <template>
   <div id="app">
-    <HeaderComponent></HeaderComponent>
-    <HomePageBaner></HomePageBaner>
-    <HomePageProject></HomePageProject>
-    <HomePageCounter></HomePageCounter>
-    <HomePageArticles></HomePageArticles>
-    <FooterComponent></FooterComponent>
+    <ProjectPage />
+
+    <HomePage />
+
+    <BlogPage />
+
+    <BlogDetailsPage />
   </div>
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue'
-import HomePageBaner from './components/pages/HomePage/HomePageBaner.vue'
-import HomePageProject from './components/pages/HomePage/HomePageProject.vue'
-import HomePageCounter from './components/pages/HomePage/HomePageCounter.vue'
-import HomePageArticles from './components/pages/HomePage/HomePageArticles.vue'
-import FooterComponent from './components/FooterComponent.vue'
+
+import HomePage from './pages/HomePage.vue'
+
+import BlogPage from './pages/BlogPage.vue'
+
+import BlogDetailsPage from './pages/BlogDetailsPage.vue'
+
+import ProjectPage from './pages/ProjectPage.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent,
-    HomePageBaner,
-    HomePageProject,
-    HomePageCounter,
-    HomePageArticles,
-    FooterComponent
+    HomePage,
+
+    BlogPage,
+
+    BlogDetailsPage,
+
+    ProjectPage
+
   }
 }
 </script>
 
 <style lang="scss">
-$widthSite: 1200px;
+@import "scss/vars";
 
 * {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .center {
-   padding-left: calc(50% - $widthSite / 2);
-   padding-right: calc(50% - $widthSite / 2);
+  padding-left: calc(50% - $widthSite / 2);
+  padding-right: calc(50% - $widthSite / 2);
 }
 </style>
