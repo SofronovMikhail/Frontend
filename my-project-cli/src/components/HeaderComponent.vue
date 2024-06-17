@@ -1,39 +1,28 @@
 <template>
   <header class="header center">
-    <div class="header__logo">
-      <img src="../assets/images/Logo.jpg" alt="logo">
-      <p class="logo__text">Interno</p>
-    </div>
-    <div class="header__menu">
-      <a class="header__link" href="#">Home</a>
-      <a class="header__link" href="#">Project</a>
-      <a class="header__link" href="#">Blog</a>
-    </div>
+    <logo-component />
+    <burger-menu-component />
+    <link-menu-component class="header__menu" textColor="#292F36" />
   </header>
 </template>
 
 <script>
+import BurgerMenuComponent from './BurgerMenuComponent.vue'
+import LinkMenuComponent from './LinkMenuComponent.vue'
+import LogoComponent from './LogoComponent.vue'
+
 export default {
-  name: 'HeaderComponent',
-
-  data () {
-    return {
-
-    }
-  },
-
-  mounted () {
-
-  },
-
-  methods: {
-
-  }
+  components: { LogoComponent, LinkMenuComponent, BurgerMenuComponent },
+  name: 'HeaderComponent'
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../scss/vars";
+
+.burger-menu {
+  display: none;
+}
 
 .header {
   margin-top: 53px;
@@ -42,42 +31,34 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 
-  &__logo {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &__logo img {
-    width: 34px;
-    height: 34px;
-  }
-
-  &__logo p {
-    font-size: 40px;
-    font-style: normal;
-    font-weight: $font-400;
-    line-height: 125%;
-    color: #292f36;
-  }
-
   &__menu {
-    text-align: center;
-    font-family: $familyText;
     font-size: 20px;
-    font-style: normal;
-    font-weight: $font-400;
     line-height: 125%;
     display: flex;
     gap: 48px;
   }
+}
 
-  &__link {
-    color: #292f36;
+@media (max-width: 767px) {
+  .header {
+    &__menu {
+      gap: 18px;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+  }
+
+  .burger-menu {
+    display: block;
   }
 }
 </style>

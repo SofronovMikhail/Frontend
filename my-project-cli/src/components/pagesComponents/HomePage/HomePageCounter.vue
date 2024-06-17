@@ -23,41 +23,29 @@
 
 <script>
 export default {
-  name: 'HomePageCounter',
-
-  data () {
-    return {
-
-    }
-  },
-
-  mounted () {
-
-  },
-
-  methods: {
-
-  }
+  name: 'HomePageCounter'
 }
 </script>
 
 <style lang="scss" scoped>
-@import "../../../scss/vars";
+@import "@/scss/vars";
 
 .counter {
   padding-top: 151px;
   padding-bottom: 151px;
   background-color: #f4f0ec;
 
-  &__wrap {
-    padding-left: 59px;
-    padding-right: 59px;
-  }
+  // &__wrap {
+  //   padding-left: 59px;
+  //   padding-right: 59px;
+  // }
 
   &__wrap {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   &__item {
@@ -69,7 +57,7 @@ export default {
     & {
       display: inline-block;
       border-right: 1px solid #cda274;
-      padding-right: 60px;
+      // padding-right: 60px;
     }
 
     &:last-child {
@@ -88,13 +76,35 @@ export default {
   }
 
   &__item-text {
-    color: #4d5053;
+    color: $secondColor;
     font-family: $familyText;
     font-size: 22px;
     font-style: normal;
     font-weight: $font-400;
     line-height: 150%;
     letter-spacing: 0.22px;
+  }
+}
+
+@media (max-width: 1023px) {
+  $widthSite: 768px;
+
+  .counter {
+    &__wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+
+      &:nth-child(3),
+      &:last-child {
+        padding-top: 100px;
+      }
+
+      &:nth-child(2) {
+        border-right: none;
+      }
+    }
   }
 }
 </style>

@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../scss/vars";
+@import "@/scss/vars";
 
 .project__categories {
   margin-top: 200px;
@@ -78,7 +78,7 @@ export default {
     margin-left: -66px;
     margin-right: -66px;
 
-    color: #292F36;
+    color: $primaryColor;
     text-align: center;
     font-family: $familyText;
     font-size: 18px;

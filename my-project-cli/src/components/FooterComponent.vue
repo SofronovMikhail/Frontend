@@ -1,29 +1,28 @@
 <template>
   <footer class="footer center">
     <div class="footer__logo">
-      <div class="header__logo">
-        <img src="../assets/images/Logo.jpg" alt="logo">
-        <p class="logo__text">Interno</p>
-      </div>
+      <logo-component />
       <p class="footer__logo-text">It is a long established fact that a reader will be distracted lookings.</p>
       <div class="footer__logo-icon">
-        <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M16.6367 4.59375C17.3398 4.06641 17.9727 3.43359 18.4648 2.69531C17.832 2.97656 17.0938 3.1875 16.3555 3.25781C17.1289 2.80078 17.6914 2.09766 17.9727 1.21875C17.2695 1.64062 16.4609 1.95703 15.6523 2.13281C14.9492 1.39453 14 0.972656 12.9453 0.972656C10.9062 0.972656 9.25391 2.625 9.25391 4.66406C9.25391 4.94531 9.28906 5.22656 9.35938 5.50781C6.30078 5.33203 3.55859 3.85547 1.73047 1.64062C1.41406 2.16797 1.23828 2.80078 1.23828 3.50391C1.23828 4.76953 1.87109 5.89453 2.89062 6.5625C2.29297 6.52734 1.69531 6.38672 1.20312 6.10547V6.14062C1.20312 7.93359 2.46875 9.41016 4.15625 9.76172C3.875 9.83203 3.52344 9.90234 3.20703 9.90234C2.96094 9.90234 2.75 9.86719 2.50391 9.83203C2.96094 11.3086 4.33203 12.3633 5.94922 12.3984C4.68359 13.3828 3.10156 13.9805 1.37891 13.9805C1.0625 13.9805 0.78125 13.9453 0.5 13.9102C2.11719 14.9648 4.05078 15.5625 6.16016 15.5625C12.9453 15.5625 16.6367 9.97266 16.6367 5.08594C16.6367 4.91016 16.6367 4.76953 16.6367 4.59375Z"
-            fill="#292F36" />
-        </svg>
-        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M4.14062 16V5.48828H0.871094V16H4.14062ZM2.48828 4.08203C3.54297 4.08203 4.38672 3.20312 4.38672 2.14844C4.38672 1.12891 3.54297 0.285156 2.48828 0.285156C1.46875 0.285156 0.625 1.12891 0.625 2.14844C0.625 3.20312 1.46875 4.08203 2.48828 4.08203ZM16.3398 16H16.375V10.2344C16.375 7.42188 15.7422 5.24219 12.4375 5.24219C10.8555 5.24219 9.80078 6.12109 9.34375 6.92969H9.30859V5.48828H6.17969V16H9.44922V10.7969C9.44922 9.42578 9.69531 8.125 11.3828 8.125C13.0703 8.125 13.1055 9.67188 13.1055 10.9023V16H16.3398Z"
-            fill="#292F36" />
-        </svg>
+        <router-link class="icon__link" to="vk">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M23.4493 5.94799C23.6161 5.40154 23.4493 5 22.6553 5H20.0297C19.3621 5 19.0543 5.34687 18.8874 5.72936C18.8874 5.72936 17.5521 8.92607 15.6606 11.0025C15.0487 11.6036 14.7705 11.7949 14.4367 11.7949C14.2698 11.7949 14.0194 11.6036 14.0194 11.0572V5.94799C14.0194 5.29225 13.8345 5 13.2781 5H9.15213C8.73494 5 8.48403 5.30434 8.48403 5.59278C8.48403 6.21441 9.42974 6.35777 9.52722 8.10641V11.9042C9.52722 12.7368 9.37413 12.8878 9.04032 12.8878C8.15023 12.8878 5.98507 9.67682 4.70093 6.00261C4.44927 5.28847 4.19686 5 3.52583 5H0.900218C0.150044 5 0 5.34687 0 5.72936C0 6.41244 0.890141 9.80039 4.14464 14.2812C6.31429 17.3412 9.37118 19 12.1528 19C13.8218 19 14.0283 18.6316 14.0283 17.997V15.6842C14.0283 14.9474 14.1864 14.8003 14.7149 14.8003C15.1043 14.8003 15.7719 14.9916 17.3296 16.467C19.1099 18.2156 19.4034 19 20.4047 19H23.0304C23.7805 19 24.1556 18.6316 23.9392 17.9045C23.7024 17.1799 22.8525 16.1286 21.7247 14.8823C21.1127 14.1719 20.1947 13.4069 19.9165 13.0243C19.5271 12.5326 19.6384 12.314 19.9165 11.8769C19.9165 11.8769 23.1155 7.45067 23.4493 5.94799Z"
+              fill="black" />
+          </svg>
+        </router-link>
+        <router-link class="icon__link" to="ok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path
+              d="M19.339 23.255c1.703-0.391 3.323-1.061 4.801-1.989 1.111-0.744 1.412-2.244 0.667-3.359-0.713-1.068-2.14-1.391-3.244-0.735-3.401 2.125-7.724 2.125-11.125 0-1.125-0.713-2.62-0.375-3.333 0.749 0 0.005 0 0.005 0 0.005-0.713 1.131-0.375 2.625 0.756 3.333l0.004 0.005c1.475 0.928 3.095 1.599 4.792 1.985l-4.62 4.619c-0.943 0.928-0.957 2.437-0.036 3.381l0.041 0.041c0.459 0.473 1.079 0.708 1.699 0.708s1.239-0.235 1.697-0.708l4.563-4.537 4.536 4.543c0.964 0.921 2.495 0.9 3.423-0.063 0.905-0.937 0.905-2.423 0-3.36zM16 16.516c4.563-0.005 8.255-3.699 8.26-8.256 0-4.552-3.708-8.26-8.26-8.26s-8.26 3.708-8.26 8.26c0.005 4.563 3.703 8.256 8.26 8.261zM16 4.844c1.885 0 3.416 1.531 3.416 3.416 0 1.891-1.531 3.417-3.416 3.423-1.885-0.005-3.416-1.532-3.421-3.423 0.005-1.885 1.536-3.416 3.421-3.421z"
+              fill="black" />
+          </svg>
+        </router-link>
       </div>
     </div>
     <div class="footer__menu">
       <p class="footer__menu-title">Pages</p>
-      <a class="footer__menu-link" href="#">Home</a>
-      <a class="footer__menu-link" href="#">Project</a>
-      <a class="footer__menu-link" href="#">Blog</a>
+      <link-menu-component class="footer__link" textColor="#4D5053" />
     </div>
     <div class="footer__services"></div>
     <div class="footer__contact">
@@ -36,7 +35,10 @@
 </template>
 
 <script>
+import LogoComponent from '../components/LogoComponent.vue'
+import LinkMenuComponent from './LinkMenuComponent.vue'
 export default {
+  components: { LogoComponent, LinkMenuComponent },
   name: 'FooterComponent',
 
   data () {
@@ -58,11 +60,25 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/vars";
 
+.icon__link:hover {
+  path {
+    opacity: 0.5;
+    transition: $transitionLinc;
+  }
+
+}
+
 .footer {
   // margin-top: 96px;
   padding-bottom: 134px;
   display: flex;
   gap: 101px;
+
+  &__link {
+    font-size: 22px;
+    letter-spacing: 0.22px;
+    line-height: 300%;
+  }
 
   &__logo {
     width: 393px;
@@ -70,7 +86,7 @@ export default {
     &-text {
       margin-top: 18px;
       margin-bottom: 31px;
-      color: #4d5053;
+      color: $secondColor;
       font-family: $familyText;
       font-size: 22px;
       font-style: normal;
@@ -81,33 +97,27 @@ export default {
 
     &-icon {
       display: flex;
+      align-items: center;
       gap: 54px;
     }
   }
 
   &__menu {
     width: 125px;
-    display: flex;
-    flex-direction: column;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+    }
 
     &-title {
       margin-bottom: 9px;
-      color: #292f36;
+      color: $primaryColor;
       font-family: $familyTitle;
       font-size: 25px;
       font-style: normal;
       font-weight: $font-400;
       line-height: 125%;
-    }
-
-    &-link {
-      color: #4d5053;
-      font-family: $familyText;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: $font-400;
-      line-height: 300%;
-      letter-spacing: 0.22px;
     }
   }
 
@@ -120,7 +130,7 @@ export default {
 
     &-title {
       margin-bottom: 26px;
-      color: #292f36;
+      color: $primaryColor;
       font-family: $familyTitle;
       font-size: 25px;
       font-style: normal;
@@ -129,7 +139,7 @@ export default {
     }
 
     &-text {
-      color: #4d5053;
+      color: $secondColor;
       font-family: $familyText;
       font-size: 22px;
       font-style: normal;
@@ -138,7 +148,7 @@ export default {
       letter-spacing: 0.22px;
 
       &-email {
-        color: #4d5053;
+        color: $secondColor;
         font-family: $familyText;
         font-size: 22px;
         font-style: normal;

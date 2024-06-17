@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../scss/vars";
+@import "@/scss/vars";
 
 .project-details {
   &__content {
@@ -32,7 +32,7 @@ export default {
 
   &__header {
     text-align: center;
-    color: #292F36;
+    color: $primaryColor;
     font-family: $familyTitle;
     font-size: 50px;
     font-style: normal;
@@ -47,7 +47,7 @@ export default {
     padding-right: calc(($widthSite - 670px) / 2);
     text-align: justify;
     margin-bottom: 100px;
-    color: #4D5053;
+    color: $secondColor;
     font-family: $familyText;
     font-size: 22px;
     font-style: normal;

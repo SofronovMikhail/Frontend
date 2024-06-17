@@ -1,46 +1,35 @@
 <template>
-  <div class="project-details">
-    <carousel :perPage="1" class="carousel">
-      <slide v-for="(slide, index) in slides" :key="index" class="slide">
-        <img :src="require('../../../assets/images/' + slide.url)" :alt="slide.alt">
-      </slide>
-    </carousel>
-  </div>
+  <SliderCarousel class="slider" :image-list="sliderImage" />
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import SliderCarousel from '../../sliderComponents/SliderCarousel.vue'
 
 export default {
   name: 'ProjectDetailsSlider',
+  components: {
+    SliderCarousel
+  },
 
   data () {
     return {
-
-    }
-  },
-
-  mounted () {
-    this.fetchSlides()
-  },
-
-  methods: {
-    ...mapActions(['fetchSlides'])
-  },
-  computed: {
-    slides () {
-      return this.$store.state.slides
+      sliderImage: [
+        { id: 1, imageSrc: 'project_details_photo.jpg', imageAlt: 'image_1' },
+        { id: 2, imageSrc: 'blog_image_4.jpg', imageAlt: 'image_2' },
+        { id: 3, imageSrc: 'blog_image_5.jpg', imageAlt: 'image_3' }
+      ]
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.project-details {
-  text-align: center;
+.hooper {
+  height: 799px;
 }
 
-.slide img {
+.slider {
   border-radius: 70px;
+  overflow: hidden;
 }
 </style>

@@ -5,19 +5,21 @@
       of page lookings at its layouts points.</p>
     <div class="project__item-wrap">
       <div class="project__item" v-for="project in projectList" :key="project.id">
-        <img :src="require('../../../assets/images/' + project.img)" :alt="project.img" :class="project.class">
+        <img :src="require('@/assets/images/' + project.img)" :alt="project.img"
+          :class="'project__item-img ' + project.class">
         <div class="project__item-content">
-          <div class="project__text-wrap">
+          <router-link to="/project" class="item__text-wrap">
             <h2 class="project__item-title">{{ project.title }}</h2>
             <p class="project__item-text">{{ project.text }}</p>
-          </div>
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 53 53" fill="none">
+          </router-link>
+          <router-link to="/project">
+            <svg class="button__link" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 53 53"
+              fill="none">
               <circle cx="26.5" cy="26.267" r="26" fill="#F4F0EC" />
               <path d="M24.271 32.9525L30.2139 26.2668L24.271 19.5811" stroke="#292F36" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
@@ -61,20 +63,17 @@ export default {
         }
       ]
     }
-  },
-
-  mounted () {
-
-  },
-
-  methods: {
-
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "../../../scss/vars";
+@import "@/scss/vars";
+
+.button__link circle:hover {
+  fill: #e1d6cc;
+  transition: $transitionLinc;
+}
 
 .project {
   margin-top: 96px;
@@ -82,7 +81,7 @@ export default {
 
   &__title {
     margin-bottom: 8px;
-    color: #292f36;
+    color: $primaryColor;
     text-align: center;
     font-family: $familyTitle;
     font-size: 50px;
@@ -93,9 +92,9 @@ export default {
   }
 
   &__text {
-    padding-left: calc(($widthSite - 737px) / 2);
-    padding-right: calc(($widthSite - 737px) / 2);
-    color: #4d5053;
+    padding-left: calc(($widthSite - 760px) / 2);
+    padding-right: calc(($widthSite - 760px) / 2);
+    color: $secondColor;
     text-align: center;
     font-family: $familyText;
     font-size: 22px;
@@ -110,7 +109,11 @@ export default {
     display: grid;
     column-gap: 100px;
     row-gap: 56px;
-    grid-template-columns: repeat(2, 550px);
+    grid-template-columns: repeat(2, ($widthSite - 100) / 2);
+  }
+
+  &__item-img {
+    width: 100%;
   }
 
   &__item-img-1 {
@@ -137,7 +140,7 @@ export default {
   }
 
   &__item-title {
-    color: #292f36;
+    color: $primaryColor;
     font-family: $familyTitle;
     font-size: 25px;
     font-style: normal;
@@ -147,13 +150,95 @@ export default {
   }
 
   &__item-text {
-    color: #4d5053;
+    color: $secondColor;
     font-family: $familyText;
     font-size: 22px;
     font-style: normal;
     font-weight: $font-400;
     line-height: 150%;
     letter-spacing: 0.22px;
+  }
+}
+
+.item__text-wrap:hover {
+  opacity: $opacityLink;
+  transition: $transitionLinc;
+}
+
+@media (max-width: 1199px) {
+  $widthSite: 1024px;
+
+  .project {
+    &__text {
+      padding-left: calc(($widthSite - 760px) / 2);
+      padding-right: calc(($widthSite - 760px) / 2);
+    }
+
+    &__item-wrap {
+      grid-template-columns: repeat(2, ($widthSite - 100) / 2);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  $widthSite: 768px;
+
+  .project {
+
+    &__text {
+      padding-left: calc(($widthSite - 760px) / 2);
+      padding-right: calc(($widthSite - 760px) / 2);
+    }
+
+    &__item-wrap {
+      gap: 50px;
+      grid-template-columns: repeat(2, ($widthSite - 50) / 2);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  $widthSite: 425px;
+
+  .project {
+    margin-top: 56px;
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__text {
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 18px;
+    }
+
+    &__item-wrap {
+      margin-top: 63px;
+      row-gap: 50px;
+      column-gap: 0;
+      grid-template-columns: repeat(1, $widthSite);
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  $widthSite: 360px;
+
+  .project {
+    &__item-wrap {
+      grid-template-columns: repeat(1, $widthSite);
+    }
+  }
+}
+
+@media (max-width: 359px) {
+  $widthSite: 320px;
+
+  .project {
+    &__item-wrap {
+      grid-template-columns: repeat(1, $widthSite);
+    }
   }
 }
 </style>

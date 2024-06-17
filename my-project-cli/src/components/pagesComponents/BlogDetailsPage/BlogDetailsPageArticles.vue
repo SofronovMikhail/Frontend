@@ -4,7 +4,7 @@
       <div class="blog-details">
         <div class="article" v-for="article in filterArticle" :key="article.id">
           <h2 class="article__title">{{ article.title }}</h2>
-          <img class="article__img" :src="require('../../../assets/images/' + article.img)" :alt="article.img">
+          <img class="article__img" :src="require('@/assets/images/' + article.img)" :alt="article.img">
           <div class="article__info">
             <p class="article__info-data">26 December,2022</p>
             <p class="article__info-link">Interior / Home / Decore</p>
@@ -41,7 +41,7 @@
                 available, but the majority have suffered.</p>
             </div>
           </div>
-          <img class="article__img" src="../../../assets/images/article_1_1.jpg" alt="article 1_1">
+          <img class="article__img" src="@/assets/images/article_1_1.jpg" alt="article 1_1">
           <p class="article__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere
             in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
             have suffered.</p>
@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../scss/vars";
+@import "@/scss/vars";
 
 .blog-details__wrap {
   margin-top: 200px;
@@ -146,7 +146,7 @@ export default {
   margin-bottom: 96px;
 
   &__title {
-    color: #292f36;
+    color: $primaryColor;
     font-family: $familyTitle;
     font-size: 50px;
     font-style: normal;
@@ -167,7 +167,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: 46px;
-    color: #4d5053;
+    color: $secondColor;
     font-family: $familyText;
     font-size: 16px;
     font-style: normal;
@@ -178,7 +178,7 @@ export default {
   }
 
   &__text {
-    color: #4d5053;
+    color: $secondColor;
     font-family: $familyText;
     font-size: 22px;
     font-style: normal;
@@ -214,7 +214,7 @@ export default {
     }
 
     &-item {
-      color: #4d5053;
+      color: $secondColor;
       font-family: $familyText;
       font-size: 22px;
       font-style: normal;
@@ -234,7 +234,7 @@ export default {
   }
 
   &__title {
-    color: #292f36;
+    color: $primaryColor;
     font-family: $familyTitle;
     font-size: 25px;
     font-style: normal;
@@ -255,7 +255,7 @@ export default {
       padding-bottom: 9px;
       border-radius: 10px;
       border: none;
-      color: #292f36;
+      color: $primaryColor;
       text-align: center;
       font-family: $familyText;
       font-size: 18px;

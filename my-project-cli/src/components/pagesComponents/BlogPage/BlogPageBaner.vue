@@ -28,10 +28,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../scss/vars";
+@import "@/scss/vars";
 
 .banner {
-  background-image: url("../../../assets/images/banner_top.jpg");
+  background-image: url("@/assets/images/banner_top.jpg");
   height: 356px;
   display: flex;
   justify-content: center;
@@ -45,7 +45,7 @@ export default {
     border-top-right-radius: 37px;
 
     &-title {
-      color: #292f36;
+      color: $primaryColor;
       font-family: $familyTitle;
       font-size: 50px;
       font-style: normal;
@@ -54,7 +54,7 @@ export default {
     }
 
     &-text {
-      color: #4d5053;
+      color: $secondColor;
       font-family: $familyText;
       font-size: 22px;
       font-style: normal;
